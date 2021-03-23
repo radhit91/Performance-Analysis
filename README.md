@@ -26,7 +26,7 @@ sudo perf stat -e branches,branch-misses,bus-cycles,cache-misses,cache-reference
 sudo perf stat -e branches,branch-misses,bus-cycles,cache-misses,cache-references,cycles,instructions,ref-cycles,cs,cpu-clock,migrations,faults,L1-dcache-load-misses,L1-dcache-loads,L1-dcache-stores,L1-icache-load-misses,LLC-load-misses,LLC-loads,LLC-store-misses,LLC-stores,branch-load-misses,branch-loads,dTLB-load-misses,dTLB-loads,dTLB-store-misses,dTLB-stores,iTLB-load-misses,iTLB-loads,node-load-misses,node-loads,node-store-misses,node-stores ./matmul-1 <br/>
 
 
-# Memeory Latency Checker (using mlc) 
+# Memory Latency Checker (using mlc) 
 modprobe msr // loading kernel driver for handling msr (model-specific registers) for switching off hardware prefetcher <br/>
 
 sudo ./mlc // for measuring memory access latency and bandwidth for both loaded and non-loaded settings; output stored in image "mlc.png"
